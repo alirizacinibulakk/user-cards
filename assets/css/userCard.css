@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sytsem-ui;
+    background-color: #cbcccd;
+}
+ul{
+    list-style: none;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 24px;
+    padding-block: 12px;
+    background-color: #242424;
+    margin-bottom: 32px;
+    h1{
+        font-size: 24px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #dadada;
+    }
+    form{
+        input{
+            border-radius: 5px;
+            padding: 5px 5px;
+        }
+    }
+}
+.userCard-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 48px;
+    margin-inline: 24px;
+}
+.user-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    padding-inline: 12px;
+    padding-block: 12px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 
+                0 6px 6px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.user-img{
+    display: flex;
+    justify-content: center;
+}
+.user-name{
+    display: flex;
+    justify-content: center;
+}
+.user-cards:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 
+                0 10px 10px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 768px){
+    header{
+        padding-inline: 48px;
+        padding-block: 24px;
+        margin-bottom: 48px;
+        h1{
+            font-size: 32px;
+        }
+        form{
+            input{
+                border-radius: 5px;
+                padding: 7px 7px;
+            }
+        }
+    }
+    .userCard-container{
+        grid-template-columns: repeat(2,1fr);
+        margin-inline: 48px;
+    }
+}
+@media screen and (min-width: 1280px){
+    header{
+        padding-inline: 144px;
+        padding-block: 32px;
+        margin-bottom: 48px;
+        h1{
+            font-size: 48px;
+        }
+        form{
+            input{
+                border-radius: 5px;
+                padding: 8px 12px;
+            }
+        }
+    }
+    .userCard-container{
+        grid-template-columns: repeat(3,1fr);
+        margin-inline: 144px;
+    }
+}
